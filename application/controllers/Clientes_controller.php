@@ -26,9 +26,15 @@
             }
 
             if($agregar == true) {
-                $this->session->set_flashdata('correcto', 'Cliente añadido correctamente');
+                $this->session->set_flashdata('correcto', 
+                '<div class="alert alert-success" role="alert">
+                    Cliente registrado correctamente
+                </div');
             } else {
-                $this->session->set_flashdata('incorrecto', 'Hubo un problema al añadir el cliente');
+                $this->session->set_flashdata('incorrecto', 
+                '<div class="alert alert-danger" role="alert">
+                    Hubo un problema al registrar el cliente
+                </div');
             }
             redirect(base_url());
         }
@@ -45,14 +51,20 @@
                             $this->input->post("apellido"),
                             $this->input->post("sexo"),
                             $this->input->post("email"),
-                            $this->input->post("direccion"),
-                            $this->input->post("fecha_nacimiento")
+                            $this->input->post("direccion")
+                            // $this->input->post("fecha_nacimiento")
                         );
 
                     if($modificar == true) {
-                        $this->session->set_flashdata('correcto', 'Cliente modificado correctamente');
+                        $this->session->set_flashdata('correcto', 
+                        '<div class="alert alert-success" role="alert">
+                            Cliente modificado correctamente
+                        </div');
                     } else {
-                        $this->session->set_flashdata('incorrecto', 'Hubo un problema al modificar el cliente');
+                        $this->session->set_flashdata('incorrecto', 
+                        '<div class="alert alert-danger" role="alert">
+                            Hubo un problema al modificar el cliente
+                        </div');
                     }
                     redirect(base_url());
                 }
@@ -66,14 +78,25 @@
                 $eliminar=$this->Clientes_model->eliminar($id);
 
                 if($eliminar == true) {
-                    $this->session->set_flashdata('correcto', 'Cliente eliminado correctamente');
+                    $this->session->set_flashdata('correcto', 
+                    '<div class="alert alert-success" role="alert">
+                        Cliente eliminado correctamente
+                    </div');
                 } else {
-                    $this->session->set_flashdata('incorrecto', 'Hubo un problema al eliminar el cliente');
+                    $this->session->set_flashdata('incorrecto', 
+                    '<div class="alert alert-danger" role="alert">
+                        Hubo un problema al eliminar el cliente
+                    </div');
                 }
                 redirect(base_url());
             } else {
                 redirect(base_url());
             }
+        }
+
+        public function verDetalle($id){
+            $clientes["verDetalle"] = $this->Clientes_model->verDetalle($id);
+            $this->load->view("detalles_view", $clientes);
         }
     }
 ?>

@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="row">
             <div class="col-12 col-sm-12 col-lg-12 col-xl-12">
                 <header>
-                    <h1 class="text-center">CRUD con CodeIgniter</h1>
+                    <h1 class="text-center">Registro de Clientes</h1>
                     <?php
                         if($this->session->flashdata('correcto'))
                             echo $this->session->flashdata('correcto');
@@ -50,36 +50,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </select>
                     </div>
 
-                    <input class="btn btn-primary" type="submit" name="submit" value="Submit">
-                    <input class="btn btn-danger" type="reset" value="Reset">
+                    <input class="btn btn-success" type="submit" name="submit" value="Agregar">
+                    <input class="btn btn-primary" type="reset" value="Restablecer">
                 </form>
                 <hr><br>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Direccion</th>
-                            <th scope="col">Sexo</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        foreach($ver as $fila) {
-                        ?>
-                        <tr>
-                            <td><?=$fila->nombre;?></td>
-                            <td><?=$fila->apellido;?></td>
-                            <td><?=$fila->email;?></td>
-                            <td><?=$fila->sexo;?></td>
-                            <td><?=$fila->direccion;?></td>
-                        </tr>
-                        <?php
-                        }
-                        ?>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Sexo</th>
+                                <th scope="col">Direccion</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            foreach($ver as $fila) {
+                            ?>
+                            <tr>
+                                <td><?=$fila->nombre;?></td>
+                                <td><?=$fila->apellido;?></td>
+                                <td><?=$fila->email;?></td>
+                                <td><?=$fila->sexo;?></td>
+                                <td><?=$fila->direccion;?></td>
+                                <td><a class="btn btn-info" href="<?=base_url("Clientes_controller/verDetalle/$fila->id")?>">Ver Detalles</a></td>                                
+                                <td><a class="btn btn-warning" href="<?=base_url("Clientes_controller/modificar/$fila->id")?>">Modificar</a></td>
+                                <td><a class="btn btn-danger" href="<?=base_url("Clientes_controller/eliminar/$fila->id")?>">Eliminar</a></td>
+                            </tr>
+                            <?php
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

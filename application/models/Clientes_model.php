@@ -27,14 +27,14 @@
             }
         }
 
-        public function modificar($id, $modificar="NULL", $nombre="NULL", $apellido="NULL", $sexo="NULL", $email="NULL", $direccion="NULL", $fecha_nacimiento="NULL") {
+        public function modificar($id, $modificar="NULL", $nombre="NULL", $apellido="NULL", $sexo="NULL", $email="NULL", $direccion="NULL") {
             if($modificar == "NULL") {
                 $consulta = $this->db->query("SELECT * FROM clientes WHERE id=$id");
                 return $consulta->result();
             } else {
                 $consulta = $this->db->query(
                     "UPDATE clientes SET email='$email', nombre='$nombre', 
-                    apellido='$apellido', sexo='$sexo' WHERE id=$id;");
+                    apellido='$apellido', sexo='$sexo', direccion='$direccion' WHERE id=$id;");
 
                 if($consulta == true){
                     return true;
@@ -51,6 +51,11 @@
             } else {
                 return false;
             }
+        }
+
+        public function verDetalle($id) {
+            $consulta = $this->db->query("SELECT * FROM clientes WHERE id=$id;");
+            return $consulta->result();
         }
     }
 ?>
