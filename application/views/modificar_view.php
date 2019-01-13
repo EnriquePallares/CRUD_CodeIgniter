@@ -10,20 +10,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             foreach($modificar as $fila) {
             ?>
             <div class="form-group">
-                <label for="inputName">Nombre</label>
+                <label for="inputName" class="font-weight-bold">Nombre</label>
                 <input type="text" class="form-control" id="inputName" name="nombre" value="<?=$fila->nombre?>">
 
-                <label for="inputLastName">Apellido</label>
+                <label for="inputLastName" class="font-weight-bold">Apellido</label>
                 <input type="text" class="form-control" id="inputLastName" name="apellido" value="<?=$fila->apellido?>">
 
-                <label for="inputEmail">Email</label>
+                <label for="inputEmail" class="font-weight-bold">Email</label>
                 <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp" value="<?=$fila->email?>">
 
-                <label for="inputAddress">Dirección</label>
+                <label for="inputAddress" class="font-weight-bold">Dirección</label>
                 <input type="text" class="form-control" id="inputAddress" name="direccion" value="<?=$fila->direccion?>">
             </div>
             <div class="form-group">
-                <label for="selectGenre">Sexo</label>
+                <label for="selectGenre" class="font-weight-bold">Sexo</label>
                 <select class="form-control" id="selectGenre" name="sexo">
                     <?php
                     if ($fila->sexo == "Masculino") {
