@@ -11,10 +11,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             ?>
             <div class="form-group">
                 <label for="inputName" class="font-weight-bold">Nombre</label>
-                <input type="text" class="form-control" id="inputName" name="nombre" pattern="[A-Za-z][A-Za-z ]+" minlength="2" required value="<?=$fila->nombre?>" >
+                <input type="text" class="form-control" id="inputName" name="nombre" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ][A-Za-zñÑáéíóúÁÉÍÓÚ ]+" minlength="2" required value="<?=$fila->nombre?>" >
 
                 <label for="inputLastName" class="font-weight-bold">Apellido</label>
-                <input type="text" class="form-control" id="inputLastName" name="apellido" pattern="[A-Za-z][A-Za-z ]+" minlength="2" required value="<?=$fila->apellido?>">
+                <input type="text" class="form-control" id="inputLastName" name="apellido" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ][A-Za-zñÑáéíóúÁÉÍÓÚ ]+" minlength="2" required value="<?=$fila->apellido?>">
 
                 <label for="inputEmail" class="font-weight-bold">Email</label>
                 <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="2" required value="<?=$fila->email?>">
