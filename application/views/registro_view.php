@@ -5,10 +5,10 @@
         <form action="<?=base_url("Clientes_controller/agregar");?>" method="post">
             <div class="form-group">
                 <label for="inputName" class="font-weight-bold">Nombre</label>
-                <input type="text" class="form-control" id="inputName" name="nombre" placeholder="Ingresa tu nombre (Min. 2 caracteres)" pattern="[A-Za-z\s]+" minlength="2" autofocus required>
+                <input type="text" class="form-control" id="inputName" name="nombre" placeholder="Ingresa tu nombre (Min. 2 caracteres)" pattern="[A-Za-z][A-Za-z ]+" minlength="2" autofocus required>
 
                 <label for="inputLastName" class="font-weight-bold">Apellido</label>
-                <input type="text" class="form-control" id="inputLastName" name="apellido" placeholder="Ingresa tu apellido (Min. 2 caracteres)" pattern="[A-Za-z\s]+" minlength="2" required>
+                <input type="text" class="form-control" id="inputLastName" name="apellido" placeholder="Ingresa tu apellido (Min. 2 caracteres)" pattern="[A-Za-z][A-Za-z ]+" minlength="2" required>
 
                 <label for="inputEmail" class="font-weight-bold">Email</label>
                 <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp" placeholder="Ingresa tu email (example@mail.com)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
