@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-01-2019 a las 23:56:59
+-- Tiempo de generación: 13-01-2019 a las 06:17:00
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
 
@@ -38,14 +38,6 @@ CREATE TABLE `clientes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `clientes`
---
-
-INSERT INTO `clientes` (`id`, `nombre`, `apellido`, `sexo`, `email`, `direccion`) VALUES
-(1, 'Enrique', 'Pallares', 'Masculino', 'example@mail.com', 'Cra 10B #63-44'),
-(2, 'Juana', 'Palo', 'Femenino', 'juana@mail.com', 'Cra 2F #44-55');
-
---
 -- Índices para tablas volcadas
 --
 
@@ -64,7 +56,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

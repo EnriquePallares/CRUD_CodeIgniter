@@ -6,7 +6,7 @@
         }
 
         public function ver() {
-            $consulta = $this->db->query("SELECT * FROM clientes;");
+            $consulta = $this->db->query("SELECT * FROM clientes ORDER BY nombre;");
             return $consulta->result();
         }
         
