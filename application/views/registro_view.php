@@ -2,7 +2,7 @@
     <div class="col-12 col-sm-12 col-lg-12 col-xl-12">
         <h4>Formulario de Registro</h4>
         <hr>
-        <form action="<?=base_url("Clientes_controller/agregar");?>" method="post" onsubmit="return formValidate()">
+        <form action="<?=base_url("Clientes_controller/agregar");?>" method="post">
             <div class="form-group">
                 <label for="inputName" class="font-weight-bold">Nombre</label>
                 <input type="text" class="form-control" id="inputName" name="nombre" placeholder="Ingresa tu nombre (Min. 2 caracteres)" pattern="[A-Za-z]+{2,}" autofocus required>
