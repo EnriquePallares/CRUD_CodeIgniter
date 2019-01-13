@@ -17,14 +17,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php
             foreach($verDetalle as $fila) {
             ?>
-            <div class="card-body">
-                <h5 class="card-title"><?=$fila->nombre?> <?=$fila->apellido?></h5>
-                <h6 class="card-subtitle mb-2 text-muted"><?=$fila->email?></h6>
-                <h6 class="card-subtitle mb-2 text-muted"><?=$fila->direccion?></h6>
-                <h6 class="card-subtitle mb-2 text-muted"><?=$fila->sexo?></h6>
+              <div class="card-body">
+                  <h5 class="card-title"><?=$fila->nombre?> <?=$fila->apellido?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted"><?=$fila->email?></h6>
+                  <h6 class="card-subtitle mb-2 text-muted"><?=$fila->direccion?></h6>
+                  <h6 class="card-subtitle mb-2 text-muted"><?=$fila->sexo?></h6>
 
-                <a class="card-link" href="<?=base_url()?>">Volver</a>
-            </div>
+                  <a class="card-link" href="<?=base_url("Clientes_controller/verClientes/")?>">Volver</a>
+              </div>
             <?php
             }
             ?>

@@ -9,11 +9,21 @@
         }
 
         public function index() {
+            $this->load->view("header_view");
+            $this->load->view("registro_view");
+            $this->load->view("footer_view");
+        }
+
+        public function verClientes() {
+            $this->load->view("header_view");
             $clientes["ver"] = $this->Clientes_model->ver();
             $this->load->view("clientes_view", $clientes);
+            $this->load->view("footer_view");
         }
 
         public function agregar() {
+            $clientes["ver"] = $this->Clientes_model->ver();
+            $this->load->view("clientes_view", $clientes);
             if($this->input->post("submit")) {
                 $agregar = $this->Clientes_model->agregar(
                             $this->input->post("nombre"),

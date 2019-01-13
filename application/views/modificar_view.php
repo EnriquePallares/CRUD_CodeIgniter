@@ -40,7 +40,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="form-group">
                         <label for="selectGenre">Sexo</label>
                         <select class="form-control" id="selectGenre" name="sexo">
-                            <option><?=$fila->sexo?></option>
+                            <option selected><?=$fila->sexo?></option>
+                            <option>Masculino</option>
+                            <option>Femenino</option>
                         </select>
                     </div>
                     <input class="btn btn-success" type="submit" name="submit" value="Modificar">
@@ -48,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     }
                     ?>
                 </form>
-                <a class="btn btn-secondary" href="<?=base_url()?>">Volver</a>
+                <a class="btn btn-secondary" href="<?=base_url("Clientes_controller/verClientes/")?>">Volver</a>
             </div>
         </div>
     </div>
