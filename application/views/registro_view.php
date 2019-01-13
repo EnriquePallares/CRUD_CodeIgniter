@@ -14,7 +14,7 @@
                 <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp" placeholder="Ingresa tu email (example@mail.com)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
 
                 <label for="inputAddress" class="font-weight-bold">Dirección</label>
-                <input type="text" class="form-control" id="inputAddress" name="direccion" placeholder="Ingresa tu dirección (Min. 2 caracteres)" pattern="[A-Za-z]+" minlength="2" required>
+                <input type="text" class="form-control" id="inputAddress" name="direccion" placeholder="Ingresa tu dirección (Min. 2 caracteres)" pattern="[\S\s]*\S[\S\s]*" minlength="2" required>
             </div>
             <div class="form-group">
                 <label for="selectGenre" class="font-weight-bold">Sexo</label>
