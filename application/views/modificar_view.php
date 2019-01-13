@@ -11,20 +11,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             ?>
             <div class="form-group">
                 <label for="inputName" class="font-weight-bold">Nombre</label>
-                <input type="text" class="form-control" id="inputName" name="nombre" value="<?=$fila->nombre?>">
+                <input type="text" class="form-control" id="inputName" name="nombre" pattern="[A-Za-z][A-Za-z ]+" minlength="2" required value="<?=$fila->nombre?>" >
 
                 <label for="inputLastName" class="font-weight-bold">Apellido</label>
-                <input type="text" class="form-control" id="inputLastName" name="apellido" value="<?=$fila->apellido?>">
+                <input type="text" class="form-control" id="inputLastName" name="apellido" pattern="[A-Za-z][A-Za-z ]+" minlength="2" required value="<?=$fila->apellido?>">
 
                 <label for="inputEmail" class="font-weight-bold">Email</label>
-                <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp" value="<?=$fila->email?>">
+                <input type="email" class="form-control" id="inputEmail" name="email" aria-describedby="emailHelp" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" minlength="2" required value="<?=$fila->email?>">
 
                 <label for="inputAddress" class="font-weight-bold">Dirección</label>
-                <input type="text" class="form-control" id="inputAddress" name="direccion" value="<?=$fila->direccion?>">
+                <input type="text" class="form-control" id="inputAddress" name="direccion" pattern="[\S\s]*\S[\S\s]*" minlength="2" required value="<?=$fila->direccion?>">
             </div>
             <div class="form-group">
                 <label for="selectGenre" class="font-weight-bold">Sexo</label>
-                <select class="form-control" id="selectGenre" name="sexo">
+                <select class="form-control" id="selectGenre" name="sexo" required>
                     <?php
                     if ($fila->sexo == "Masculino") {
                     ?>
