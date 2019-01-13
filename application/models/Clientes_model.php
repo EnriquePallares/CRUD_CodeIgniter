@@ -3,6 +3,7 @@
         public function __construct() {
             parent::__construct();
             $this->load->database();
+            date_default_timezone_set('America/Bogota');
         }
 
         public function ver() {
@@ -13,9 +14,10 @@
         public function agregar($nombre, $apellido, $sexo, $email, $direccion) {
             $consulta = $this->db->query("SELECT email FROM clientes WHERE email LIKE '$email'");
             if($consulta->num_rows()==0) {
+                $fecha_registro = date("Y/m/d h:i:s");
                 $consulta = $this->db->query(
                     "INSERT INTO clientes VALUES(NULL, '$nombre', '$apellido' , '$sexo',
-                    '$email', '$direccion');");
+                    '$email', '$direccion', '$fecha_registro');");
 
                 if($consulta == true) {
                     return true;
